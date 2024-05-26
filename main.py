@@ -1,4 +1,13 @@
-numbers = [2, 4, 5, 8]
-text_dict = {num: num ** 2 for num in numbers if num % 2}
+word = input()
+symbol_dic = {}
 
-print (text_dict)
+for char in word:
+    if char not in symbol_dic:
+        if char == " ":
+            symbol_dic["space"] = 1
+        symbol_dic[char] = 1
+    else:
+        if char == " ":
+            symbol_dic["space"] += 1
+        symbol_dic[char] += 1
+print(symbol_dic)
